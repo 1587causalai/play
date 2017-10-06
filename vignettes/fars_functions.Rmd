@@ -1,0 +1,27 @@
+---
+title: "Summarizing and plotting US Traffic fatalities with fars"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Summarizing and plotting US Traffic fatalities with fars}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(fars)
+```
+
+# Resources and Goals
+`fars` will be using data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System, which is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes. The goal of the package is to provide a monthly summary for the number of fatalities for a specific year as well as plotting a US state map with the coordonates of each traffic fatality over a one year period. 
+
+# Getting the number of monthly traffic fatalities
+To retrieve the number of monthly traffic accidents for a specific year(s) we'll use the `fars_summarize_years` function that takes as arguments either a single year or a vector of year values:
+```{r get_summary}
+fars_summarize_years (c(2013,2014))
+```
+# Plotting traffic fatalities per year on a US state map
+To plot the state map of all traffic fatalities for a specific year we'll use `fars_map_state` function, with the state id as the first argument and the year as the second:
+```{r plot_state_map}
+fars_map_state(1,2014)
+```

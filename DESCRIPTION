@@ -1,12 +1,15 @@
-Package: play
-Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: GPL (>= 2.0)
+Package: fars
+Title: Summarize and plot US traffic fatalities 
+Version: 0.0.0.9000
+Authors@R: person("Adi", "Gherman", email = "adig@jhu.edu", role = c("aut", "cre"))
+Description: This package is using the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System census data to provide a yearly summary as well as plotting traffic accident fatalities in the US for each state.
+Depends: R (>= 3.4.1)
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
+Imports:
+  dplyr, tidyr, maps, graphics, magrittr, readr
 RoxygenNote: 6.0.1
+Suggests: knitr, rmarkdown,
+    testthat
+VignetteBuilder: knitr
